@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Custom base styles ===== */
+:root {
+  --wia-primary: #0c2340; /* dark aerospace navy */
+  --wia-secondary: #b5121b; /* accent red */
+  --wia-light: #f8f9fa; /* near white */
+  --wia-gray: #6c757d; /* neutral gray */
+}
+
+html, body {
+  @apply bg-[var(--wia-light)] text-gray-800 font-sans antialiased;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Links */
+a {
+  @apply text-[var(--wia-secondary)] hover:text-[var(--wia-primary)] transition-colors;
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  @apply px-5 py-2 rounded-2xl font-medium shadow-md transition;
+  background-color: var(--wia-primary);
+  color: white;
+}
+
+.btn:hover {
+  background-color: var(--wia-secondary);
+}
+
+/* Navbar */
+.navbar {
+  @apply flex items-center justify-between py-4 px-6 shadow bg-white;
+}
+
+.navbar a {
+  @apply text-gray-700 hover:text-[var(--wia-secondary)];
+}
+
+/* Footer */
+.footer {
+  @apply bg-[var(--wia-primary)] text-white text-center py-6;
+}
